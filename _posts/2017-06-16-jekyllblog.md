@@ -23,7 +23,6 @@ sudo gem install bundler
 sudo gem install jekyll
 ```
 > 很多文章中的gem source都是淘宝源，但现在淘宝已经推荐ruby-china了
-
 并且你需要将自己的RSA key添加到github以获取权限
 
 #### 本文将记述笔者建立github博客的步骤，并在文章最后进行总结。希望通过本文读者也能建立自己的github博客。
@@ -33,7 +32,7 @@ sudo gem install jekyll
 
 ## 二，建立个人的博客repo
   在登录github后，点击右上角的'+'，选择'New repository'创建自己的博客repo。repo的名字按照"你的ID.github.io"的格式来写。
-> 笔者由于之前已经创建了自己id的repo，在此为了演示，创建的repo名字后加了'test'，读者创建repo时一定要将示例的bwaioxtest替换为自己的githubID
+> 笔者由于之前已经创建了自己id的repo，在演示期间为了防止重复，创建的repo名字后加了'test'，读者创建repo时一定要将示例的bwaioxtest替换为自己的githubID
 
 ![示例图1](http://i38.photobucket.com/albums/e150/1967262017/0_zpstxenzjzd.png)
 
@@ -97,7 +96,11 @@ title: 我的第一篇jekyll日志
   首先我们需要将jekyll自动生成的网站目录_site忽略掉，只提交我们的配置文件和日志md文件就可以了`echo "_site" > .gitignore`，即可让git工具忽略掉_site目录。
 ![示例图10](http://i38.photobucket.com/albums/e150/1967262017/10_zps6ymi8eda.png)
 
-  现在可以把修改先用`git add xxx yyy`添加到git管理，提交到本地`git commit -m "version 1"`，随后`git push origin master:master`即可
+  现在可以把修改先用`git add .`添加到git管理，提交到本地`git commit -m "version 1"`，随后`git push origin master:master`即可
 ![示例图11](http://i38.photobucket.com/albums/e150/1967262017/11_zps69cg5vwa.png)
 
   这时，别人就可以通过**http://你的ID.github.io**来访问你的github博客了
+
+#### 总结
+  首先建立好github账号和repo，并且准备好自己机器的写作环境，选择自己心仪的jekyll模板后，我们就可以写作了。其中用到的git命令也比较简单，基本就是本文所列。难点在于如何根据模板创作出漂亮的博客页面，这需要对模板做深入的理解，必要时需要读者自行对模板进行修改。最后祝大家写作开心。
+  欢迎在大家下方评论区留言。
